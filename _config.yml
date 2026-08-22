@@ -1,9 +1,9 @@
-title: Marginalia
-tagline: Notes in the margins
+title: Muhammed Yılmaz
+tagline: Vibe-Blog
 description: >-
-  A personal blog. Replace this description in _config.yml with your own.
-author: Your Name
-email: you@example.com
+  A blog about posts of the topics of the videos I uploaded.
+author: Muhammed Yılmaz
+email: muhammedyilmazyil.com
 url: muhammedyilmaz.blog   # <-- change to your actual domain, no trailing slash
 baseurl: ""
 

@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<article class="post">
+  <div class="post-margin">
+    <span class="date">{{ page.date | date: "%b %-d, %Y" }}</span>
+    <span>{{ page.content | number_of_words | divided_by: 200 | at_least: 1 }} min read</span>
+    {% if page.tags.size > 0 %}
+      {% for tag in page.tags %}<span>#{{ tag }}</span>{% endfor %}
+    {% endif %}
+  </div>
+  <div class="post-body">
+    <h1 class="post-title">{{ page.title }}</h1>
+    {{ content }}
+    <div class="post-footer">
+      <a class="back-link" href="{{ '/' | relative_url }}">back to all writing</a>
+    </div>
+  </div>
+</article>

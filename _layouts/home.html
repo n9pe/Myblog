@@ -1,0 +1,21 @@
+---
+layout: default
+---
+<div class="intro">
+  {{ content }}
+</div>
+
+<div class="entries">
+  {% for post in site.posts %}
+  <article class="entry">
+    <div class="entry-margin">
+      <span class="date">{{ post.date | date: "%b %-d, %Y" }}</span>
+      <span class="meta">{{ post.content | number_of_words | divided_by: 200 | at_least: 1 }} min read</span>
+    </div>
+    <div>
+      <h2 class="entry-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p class="entry-excerpt">{{ post.excerpt | strip_html | truncatewords: 32 }}</p>
+    </div>
+  </article>
+  {% endfor %}
+</div>

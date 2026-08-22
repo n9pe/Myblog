@@ -1,0 +1,303 @@
+/* ---------------------------------------------------------
+   Marginalia — design tokens
+   Paper & ink palette, editorial type scale, marginal-note
+   gutter as the signature structural element.
+--------------------------------------------------------- */
+
+:root {
+  --paper: #EDE8DD;
+  --paper-raised: #F5F1E7;
+  --ink: #1F2A24;
+  --ink-soft: #4B5750;
+  --rule: #C9C0AC;
+  --brick: #7A3B2E;
+  --moss: #3F5C4C;
+
+  --display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --body: "Source Serif 4", Georgia, serif;
+  --mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --content-width: 42rem;
+  --gutter-width: 11rem;
+  --measure: 68ch;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  background: var(--paper);
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1.125rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a { color: var(--brick); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a:hover { color: var(--moss); }
+
+::selection { background: var(--brick); color: var(--paper-raised); }
+
+/* ---------- Skip link / accessibility ---------- */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.5rem 1rem;
+  border-radius: 2px;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brick);
+  outline-offset: 3px;
+}
+
+/* ---------- Layout shell ---------- */
+.page {
+  max-width: 74rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--rule);
+  padding: 2.75rem 0 1.75rem;
+  margin-bottom: 3rem;
+}
+
+.site-header .page {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.site-title {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 1.9rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.site-tagline {
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.03em;
+}
+
+.site-nav a {
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  text-transform: lowercase;
+  letter-spacing: 0.03em;
+  margin-left: 1.25rem;
+  text-decoration: none;
+  color: var(--ink-soft);
+  border-bottom: 1px solid transparent;
+}
+
+.site-nav a:hover {
+  color: var(--brick);
+  border-bottom-color: var(--brick);
+}
+
+/* ---------- Home: post index with marginalia gutter ---------- */
+.entries {
+  display: flex;
+  flex-direction: column;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: var(--gutter-width) 1fr;
+  gap: 0 2rem;
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.entry:last-child { border-bottom: 1px solid var(--rule); }
+
+.entry-margin {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  line-height: 1.8;
+  padding-top: 0.35rem;
+}
+
+.entry-margin .date { display: block; color: var(--brick); }
+.entry-margin .meta { display: block; }
+
+.entry-title {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+  line-height: 1.3;
+}
+
+.entry-title a { color: var(--ink); text-decoration: none; }
+.entry-title a:hover { color: var(--brick); }
+
+.entry-excerpt {
+  color: var(--ink-soft);
+  font-size: 1rem;
+  max-width: var(--measure);
+}
+
+.intro {
+  max-width: 38rem;
+  margin-bottom: 3.5rem;
+}
+
+.intro p {
+  font-size: 1.2rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- Single post ---------- */
+.post {
+  display: grid;
+  grid-template-columns: var(--gutter-width) 1fr;
+  gap: 0 2rem;
+  align-items: start;
+}
+
+.post-margin {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  line-height: 2;
+  position: sticky;
+  top: 2rem;
+}
+
+.post-margin .date { display: block; color: var(--brick); margin-bottom: 0.5rem; }
+
+.post-body {
+  max-width: var(--measure);
+}
+
+.post-title {
+  font-family: var(--display);
+  font-size: 2.5rem;
+  line-height: 1.15;
+  font-weight: 600;
+  margin: 0 0 1.75rem;
+  letter-spacing: -0.01em;
+}
+
+.post-body p { margin: 0 0 1.35rem; }
+
+.post-body h2 {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  margin: 2.5rem 0 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.post-body blockquote {
+  margin: 1.75rem 0;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--brick);
+  color: var(--ink-soft);
+  font-style: italic;
+}
+
+.post-body a { text-decoration-line: underline; }
+
+.post-body img {
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem 0;
+}
+
+.post-body code {
+  font-family: var(--mono);
+  font-size: 0.88em;
+  background: var(--paper-raised);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+.post-body pre {
+  background: var(--paper-raised);
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+}
+.post-body pre code { background: none; padding: 0; }
+
+.post-footer {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+}
+
+.back-link {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+.back-link:before { content: "← "; }
+
+/* ---------- Page (about, etc) ---------- */
+.page-content {
+  max-width: var(--measure);
+}
+.page-content h1 {
+  font-family: var(--display);
+  font-size: 2.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+  margin-top: 5rem;
+  padding: 2rem 0 3rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+  .entry, .post {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  .entry-margin, .post-margin {
+    position: static;
+    display: flex;
+    gap: 1rem;
+    line-height: 1.5;
+  }
+  .post-title { font-size: 1.9rem; }
+  .site-header .page { flex-direction: column; align-items: flex-start; }
+  .site-nav { margin-top: 0.25rem; }
+  .site-nav a { margin-left: 0; margin-right: 1.1rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { scroll-behavior: auto !important; }
+}

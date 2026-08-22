@@ -1,0 +1,33 @@
+title: Marginalia
+tagline: Notes in the margins
+description: >-
+  A personal blog. Replace this description in _config.yml with your own.
+author: Your Name
+email: you@example.com
+url: "https://www.yourdomain.com"   # <-- change to your actual domain, no trailing slash
+baseurl: ""
+
+# Markdown / build settings — leave these alone
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

@@ -6,12 +6,12 @@ permalink: /about/
 
 <div class="page-content">
                                             <h1>About</h1>
-  <p>My name is Muhammed Yılmaz, uploading posts about the topics I discuss in social media contents </p>
+  <p>Hi! I'm posting about the topics that I have discussed in the videos. </p>
   <p>You can reach me at <a href="mailto:muhammedyilmazyil.com">muhammedyilmazyil.com</a>.</p>
 </div>
 <div class="profile">
   <img class="profile-avatar" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Photo of Your Name">
-  <h1 class="profile-name">Muhammed Yılmaz</h1>
+  <h1 class="profile-name"></h1>
   <div class="profile-links">
     <a href="https://github.com/n9pe" target="_blank" rel="noopener" aria-label="GitHub">
       <svg viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.57.1.78-.25.78-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.34-1.28-1.7-1.28-1.7-1.04-.72.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.64 1.59.24 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.41-5.27 5.69.42.36.78 1.07.78 2.15 0 1.56-.01 2.81-.01 3.19 0 .31.2.66.79.55A10.52 10.52 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5z"/></svg>

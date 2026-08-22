@@ -5,6 +5,6 @@ permalink: /about/
 ---
 <div class="page-content">
   <h1>About</h1>
-  <p>Write a few sentences about yourself here — who you are, what you write about, and why. This is a normal Jekyll page, so you can edit this file (<code>about.md</code>) directly in GitHub the same way you'd edit a post.</p>
-  <p>You can reach me at <a href="mailto:you@example.com">you@example.com</a>.</p>
+  <p>My name is Muhammed Yılmaz, uploading posts about the topics I discuss in social media contents </p>
+  <p>You can reach me at <a href="mailto:http://muhammedyilmazyil.com/">http://muhammedyilmazyil.com/</a>.</p>
 </div>

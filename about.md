@@ -7,7 +7,7 @@ permalink: /about/
 <div class="page-content">
                                             <h1>About</h1>
   <p>Hi! I'm posting about the topics that I have discussed in the videos. </p>
-  <p>You can reach me at <a href="mailto:muhammedyilmazyil.com">muhammedyilmazyil.com</a>.</p>
+  <p>You can reach me at <a href="mailto:muhammedyilmazyil@gmail.com">muhammedyilmazyil@gmail.com</a>.</p>
 </div>
 <div class="profile">
   <img class="profile-avatar" src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Photo of Your Name">

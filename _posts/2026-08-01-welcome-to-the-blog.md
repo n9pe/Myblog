@@ -1,5 +1,5 @@
 ---
-title: "Welcome to the blog"
+title: "hey first time no see!"
 date: 2026-08-01
 tags: [meta]
 ---
